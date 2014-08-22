@@ -1,7 +1,71 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    version="3.0">
+  <display-name>FVC Test Project</display-name>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+       /WEB-INF/fvc-servlet.xml
+    </param-value>
+  </context-param>
+	<!--   FIILTERS -->
+   <filter>
+    <filter-name>hibernateFilter</filter-name>
+    <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+    <init-param>
+        <param-name>singleSession</param-name>
+        <param-value>true</param-value>
+    </init-param>
+    <init-param>
+        <param-name>sessionFactoryBeanName</param-name>
+        <param-value>sessionFactory</param-value>
+    </init-param>
+  </filter>
+   <filter-mapping>
+     <filter-name>hibernateFilter</filter-name>
+     <url-pattern>/*</url-pattern>
+   </filter-mapping>
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>
+            org.springframework.web.filter.CharacterEncodingFilter
+        </filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+        <init-param>
+        	<param-name>forceEncoding</param-name>
+        	<param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+    	<filter-name>HttpMethodFilter</filter-name>
+    	<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+    </filter>
+    <filter-mapping>
+    	<filter-name>HttpMethodFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+   	
+	<!--   LISTENERS -->
+  	<listener>
+	    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  	</listener>
+  
+  <!--   SERVLET -->
+  <servlet>
+     <servlet-name>fvc-servlet</servlet-name>
+     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+     <load-on-startup>1</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+     <servlet-name>fvc-servlet</servlet-name>
+     <url-pattern>*.do</url-pattern>
+   </servlet-mapping>
 </web-app>
