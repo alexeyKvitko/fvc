@@ -60,12 +60,12 @@
   
   <!--   SERVLET -->
   <servlet>
-     <servlet-name>fvc-servlet</servlet-name>
+     <servlet-name>fvc</servlet-name>
      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
      <load-on-startup>1</load-on-startup>
    </servlet>
    <servlet-mapping>
-     <servlet-name>fvc-servlet</servlet-name>
+     <servlet-name>fvc</servlet-name>
      <url-pattern>*.do</url-pattern>
    </servlet-mapping>
 </web-app>

@@ -1,0 +1,86 @@
+.projectLabel{
+	margin : 5px 0px 10px 5px;
+	margin-bottom : 5px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+	color: #3A90EB;
+}
+.addIcon {
+    background-image: url( ../app_images/add.png );
+    margin-right:15px;
+    background-position:center;
+}
+.accessIcon {
+    text-align:center;
+    background-image: url( ../app_images/access.png );
+}
+.appExitIcon {
+    text-align:center;
+    background-image: url( ../app_images/appExit.png );
+}
+.configIcon {
+    text-align:center;
+    background-image: url( ../app_images/config.png );
+}
+.controllerIcon {
+    text-align:center;
+    background-image: url( ../app_images/controller.png );
+}
+.databaseIcon {
+    text-align:center;
+    background-image: url( ../app_images/database.png );
+}
+.deleteIcon {
+    background-image: url( ../app_images/delete.png );
+    margin-right:15px;
+    background-position:center;
+}
+.departmentIcon {
+    text-align:center;
+    background-image: url( ../app_images/department.png );
+}
+.editIcon {
+    background-image: url( ../app_images/edit.png );
+    margin-right:15px;
+    background-position:center;
+}
+.mapIcon {
+    text-align:center;
+    background-image: url( ../app_images/map.png );
+}
+.operIcon {
+    text-align:center;
+    background-image: url( ../app_images/oper.png );
+}
+.personalIcon {
+    text-align:center;
+    background-image: url( ../app_images/personal.png );
+}
+.reportIcon {
+    text-align:center;
+    background-image: url( ../app_images/report.png );
+}
+.viewIcon {
+    text-align:center;
+    background-image: url( ../app_images/view.png );
+}
+
+
+.logoIcon {
+    text-align:center;
+    background-image: url( ../app_images/logo.png );
+}
+
+.logoIcon {
+    width:300px;
+    height:30px;
+    background-image: url( ../app_images/logo.png );
+    repeat-x:false;
+}
+.logoBack {
+    text-align:center;
+    background-image: url( ../app_images/back.png );
+    repeat-x:true;
+}
+
+
